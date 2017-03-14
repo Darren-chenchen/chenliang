@@ -1,10 +1,10 @@
-*{
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul{
     padding: 0;
     margin: 0;
 }
 
 /*头部*/
-.header{
+#header{
     width: 100%;
     text-align: center;
     background-color: #dfdfdf;
@@ -13,18 +13,30 @@
     z-index: 10000;
     top:0;
 }
-.header audio{
+#header a{
+    text-decoration: none;
+}
+.topSelected{
+    background-color: #7f7f7f;
+    color: white;
+
+}
+.topUnSelected{
+    background-color: #7f7f7f;
+    color: black;
+}
+#header audio{
     float: left;
     margin-top: 10px;
 }
-.header ul {
+#header ul {
 }
-.header ul li{
+#header ul li{
     display: inline-block;
     font-size: 20px;
     padding: 10px;
 }
-.header ul :hover{
+#header ul :hover{
     background-color: #7f7f7f;
     color: white;
     cursor: pointer;
