@@ -8,7 +8,7 @@ function change(obj) {
         if (tabs[i] == obj) {
             tabs[i].className = "topSelected";
             document.getElementById("items" + i).style.display = "block";
-            // $('body,html').animate({scrollTop:0},100);
+            $('body,html').animate({scrollTop:0},100);
             if (i == 2) {  // 教育经历
                 setTimeout("inputText()",2000);
                 bashBegin();
