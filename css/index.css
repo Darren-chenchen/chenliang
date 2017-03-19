@@ -378,7 +378,7 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 
 }
 #items1 .aboutme{
-    overflow: hidden;
+    margin-top: 50px;
 }
 #items1 .aboutme img{
     width: 50%;
