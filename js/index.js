@@ -17,6 +17,10 @@ function change(obj) {
                 setTimeout("workExprience()",2000);
                 bashWorkBegin();
             }
+            if (i==4) {  // 职业技能
+                setTimeout("workTech()",2000);
+                bashTechBegin();
+            }
         } else {
             tabs[i].className = "";
             document.getElementById("items" + i).style.display = "none";
@@ -76,3 +80,39 @@ function bashWorkBegin() {
     var bash = document.getElementById("bash_work");
     bash.style.animationName = "bashTransform_Work";
 }
+
+//职业技能
+var indexTech = 0;
+var txttimerTech;     //调用setInterval的返回值，用于取消对函数的周期性执行
+var techText = "➢熟练掌握C/C++/Objective-C编程,swift编程，熟练使用iOS SDK及相关开发工具;" +
+    "➢熟练MVC、代理、单例、观察者等常用设计模式" +
+    ";➢熟练运用Block，多线程，GCD编程;" +
+    "➢擅长数据存储、plist、对象序列化、Realm数据库" +
+    "➢熟练使用一些常用的第三方框架,并能够在其基础上进行扩展;" +
+    "➢熟悉AES256对称加密和非对称加密算法;" +
+    "➢熟练使用第三方分享和系统原生分享，第三方登录;" +
+    "➢熟练git、SVN源代码管理器;" +
+    "➢熟练操作App上架及版本更新;" +
+    "➢熟练使用融云环信即时通讯与极光推送;" +
+    "➢能够快速完成原生应用与h5的交互;";
+
+techText=techText.replace(/;/g,"\n");
+function workTech() {
+    var newtext = techText.substring(0, indexTech+1);
+    clearInterval(txttimerTech); // 先清除定时器,放置index不断增加
+    if (indexTech>newtext.length) {  // 打字完成后就停止定时器
+        clearInterval(txttimerTech);
+        indexTech = 0;
+        return;
+    } else {
+        document.getElementById("bash_body_inputTech").innerHTML = newtext;
+        indexTech++;
+        txttimerTech = setInterval("workTech()",100);
+    }
+}
+//工作经历动画
+function bashTechBegin() {
+    var bash = document.getElementById("bash_Tech");
+    bash.style.animationName = "techBashMove";
+}
+

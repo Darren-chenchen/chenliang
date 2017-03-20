@@ -395,7 +395,7 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 #items2 .banner p{
     margin-left: 45%;
 }
-#bash,#bash_work{
+#bash,#bash_work,#bash_Tech{
     width: 60%;
     height: 400px;
     margin: 0 auto;
@@ -441,7 +441,7 @@ body textarea{
     color: white;
     font-size: 16px;
 }
-#bash,#bash_work{
+#bash,#bash_work,#bash_Tech{
     animation-duration: 2s;
 }
 @keyframes bashTransform {
@@ -468,11 +468,23 @@ body textarea{
         margin-top: 100px;
     }
 }
+/*职业技能*/
 #items4{
     margin-top: 100px;
     display: none;
 }
+#items4 #bash_Tech .bash_body{
+    height: 800px;
+}
 #items5{
     margin-top: 100px;
     display: none;
+}
+@keyframes techBashMove {
+    from{
+        margin-left: -1000px;
+    }
+    to{
+        margin: 400px;;
+    }
 }
